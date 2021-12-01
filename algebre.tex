@@ -1,0 +1,185 @@
+\begin{exercise}[from=Devoir MPI 2019,nosol]
+	Les questions de cet exercice sont indépendantes.
+	\begin{enumerate}
+		\item Soient $A,B,C$ des parties d'un ensemble $E$. Montrer que
+		$$
+			(A \Delta B) \cap C=(A \cap C) \Delta(B \cup C).
+		$$
+		\item Déterminer $f^{-1}([-3,3])$ pour la fonction $f:\mathbb{R}\rightarrow\mathbb{R},\ x \mapsto x^2$.
+		\item Soient $E,F$ des ensembles, $f:E \rightarrow F$ une application et $A \subset E,\ B \subset F$.
+		Montrer que $f(A \cap f^{-1}(B))=f(A) \cap B$.
+		\item Soit $E$ un ensemble. On définit sur $\mathcal{P}(E)$ la relation $\mathcal{R}$ par
+		$$
+			A \mathcal{R} B \Longleftrightarrow A = B \text{ ou } A = \bar{B}.
+		$$
+		Montrer que $\mathcal{R}$ est une relation d'équivalence sur $\mathcal{P}(E)$.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[from=Devoir MPI 2019,nosol]
+	Soit $G$ un groupe et $H,K$ deux sous-groupe de $G$. On note
+	$$
+		HK=hk \in G \mid h \in H,k \in K.
+	$$
+	\begin{enumerate}
+		\item Montrer que $HK$ est un sous groupe de $G$ si et seulement si $HK=KH$.
+		\item Quel est le cardinal de $HK$ lorsque $H$ et $K$ sont finis ?
+		\item Montrer que si $H \cap K = \{e\}$ alors tout élément de $HK$ s'écrit de manière unique comme produit $hk$.
+		\item Soit $G=\mathbb{Z}/6\mathbb{Z}, H=\langle \bar{2}\rangle \text{ et } K=\langle\bar{3}\rangle$. Vérifier que $G=HK$ et qu'il y a unicité de l'écriture comme dans la question précédente.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[from=Devoir MPI 2017,nosol]
+	Soit $\mathcal{F}$ une famille non vide de parties d'un ensemble $E$ telle que:
+	\[
+		\forall (A,B) \in (\mathcal{P}(E))^2,\exists~ C \in \mathcal{F} \text{ tel que } C \subset A \cap B.
+	 \]
+	 Dans $\mathcal{P}(E)$, on définit la relation $\mathcal{R}$ par:
+	 \[
+	 	X\mathcal{R}Y\Leftrightarrow \exists A \in \mathcal{F} \text{ tel que } A \cap X = A \cap Y.
+	 \]
+	 \begin{enumerate}
+	 	\item Montrer que $\mathcal{R}$ est une relation d'équivalence dans $\mathcal{P}(E)$.
+	 	\item  Montrer que pour tout $X \in \mathcal{P}(E)$, on a
+	 	\[
+	 		cl(X)=\{Y \in \mathcal{P}(E)/Y=(A \cap X) \cup B , \text{ avec } A \in \mathcal{F} \text{ et } B \subset A^C \}.
+	 	\]
+	 \end{enumerate}
+\end{exercise}
+\begin{exercise}[from=Devoir MPI 2017]
+	On définit la loi $\star$ sur $\mathbb{R}$ en posant: $x \star y = x+y-xy$.
+	\begin{enumerate}
+		\item Étudier la loi $\star$. $(\mbb{R}, \star)$ est-il un groupe?
+		\item Montrer que $(\mbb{R}-\{1\},\star)$ est un groupe abélien isomorphe à $(\mbb{R}^*,\times)$. (On pourra considérer l'application $\varphi: \mbb{R}-\{1\}\rightarrow \mbb{R}^*,t \mapsto 1-t$)
+	\end{enumerate}
+	\cor
+	\begin{enumerate}
+		\item La loi est commutative , associative d'élement neutre 0.
+		\begin{align*}
+			xx'& = x+x'-xx'= 0\\
+			   & \Leftrightarrow x'(1-x)=-x
+		\end{align*}
+		$x=1$ n'as pas d'inverse. $(\mathbb{R},\star)$ n'est pas un groupe.
+		\item $\forall x,y \in \mathbb{R}$, $1-x \star y = (1-x)(1-y)$.
+		\\On a $x=1-x \text{ et } y=1-y$.
+		\\Soit $\varphi(xy)=\varphi(x) \star \varphi(y)$
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[from=Devoir SR MPI 2010]
+	Soient $E$ un ensemble, $A$ et $B$ deux parties de $E$. On définit l'application:
+	\begin{align*}
+		\Phi:  \mathcal{P}(E)&\longrightarrow \mathcal{P}(A)\times \mathcal{P}(B)\\
+		X &\longmapsto (X \cap A, X \cap B)
+	\end{align*}
+	\begin{enumerate}
+		\item Montrer que pour que $\Phi$ soit injective, \textit{il faut et il suffit} que $A\cup B = E$
+		\item Montrer que pour que $\Phi$ soit surjective, \textit{il faut et il suffit} que $A\cap B = \varnothing$
+		\item Lorque $\Phi$ est bijective, determiner son application reciproque.
+	\end{enumerate}
+
+	\cor
+	\begin{enumerate}
+		\item On suppose que $\Phi$ soit injective. En remarquant que $\Phi(A \cup B) =(A,B)=\Phi(E)$. Alors $(X\cap A, X \cap B) = (Y \cap A, Y \cap B).$ Donc $X \cap A = Y \cap A$ et $X \cap B = Y \cap B$. Par suite $(X \cap A) \cup (X \cap B) = (Y \cap A) \cup (Y \cap B)$ ou encore $X\cap (A \cup B) = Y \cap(A \cup B)$. Enfin, puisque $E=A \cup B$, il  vient que $X=Y$. Donc $\Phi$ est injective.
+		\item Supposons que $\Phi$ est surjective. Alors il existe $X \in \mathcal{P}(E)$ tel que $\Phi(X)=(\varnothing, B)$. D'où $(X \cap A, X \cap B)=(\varnothing, B)$. Donc $X \cap A = \varnothing$ et $X\cap B = B$. Ainsi, $B \subset X$ et $X \cap A = \varnothing$. Par suite $A\cap B = \varnothing$. Réciproquement, supposons que $A\cap B=\varnothing$ et soit $(A_1, B_1)\in \mathcal{P}(A)\times \mathcal{P}(B)$. On cherche $X\in \mathcal{P}(E)$ tel que $\Phi (X)=(A_1,B_1)$. Donc $X\cap A =A_1$ et $X\cap B = B_1$. Ainsi $A_1 \subset X$ et $B_1 \subset X$. Si l'on choisit $X$ tel que $A_1 \subset X$  et $B_1 \subset X$ alors $\Phi (X)=(A_1,B_1)$. Par exemple $\Phi (A_1\cup B_1)=(A_1,B_1)$ car $A\cap B=\varnothing$.
+		\item Soit $(A_1, B_1)\in \mathcal{P}(A)\times \mathcal{P}(B)$. Comme $\Phi$ est surjective, il existe $X\in \mathcal{P}(E)$ tel que $\Phi (X)=(A_1,B_1)$. Donc $X\cap A =A_1$ et $X\cap B = B_1$. Donc $A_1 \cup B_1 =(X\cap A)\cup (X\cap B) = X\cap (A\cup B)$. Comme $\Phi$ est injective, $A\cup B=E$. Donc $X=A_1\cup B_1$. Par suite, la réciproque de $\Phi$ est définie par:
+		\begin{align*}
+			\Phi^{-1}: \mathcal{P}(A)\times \mathcal{P}(B) &\longrightarrow \mathcal{P}(E)\\
+			(X,Y) &\longmapsto X\cup Y
+		\end{align*}
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+
+\end{exercise}
+
+\begin{exercise}[from=Devoir SR MPI 2016]
+	%	\pscirclebox{stuff}
+	\lipsum[2-5]
+	\tcblower
+	\lipsum[3]
+\end{exercise}
+
+\begin{exercise}[nosol,from=Devoir SR MPI 2010]
+	\lipsum[6]
+\end{exercise}
+\begin{exercise}
+	\lipsum[2-5]
+	\tcblower
+	\lipsum[3]
+\end{exercise}
+\begin{exercise}[from=Devoir SN MPI 2018]
+	\lipsum[2-5]
+	\tcblower
+	\lipsum[3]
+\end{exercise}
+\begin{exercise}[nosol,from=Concours Asecna 2015]
+	\lipsum[6]
+\end{exercise}
+\begin{exercise}
+	\lipsum[2-5]
+	\tcblower
+	\lipsum[3-10]
+\end{exercise}
+
+\begin{exercise}[nosol]
+	\lipsum[6]
+\end{exercise}
+\begin{exercise}
+	\lipsum[2-5]
+	\tcblower
+	\lipsum[3]
+\end{exercise}
+\begin{exercise}[from=TD SB 2015]
+	\lipsum[2-5]
+	\tcblower
+	\lipsum[3]
+\end{exercise}
+\begin{exercise}[nosol]
+	\lipsum[6]
+\end{exercise}
+\begin{exercise}
+	\lipsum[2-5]
+	\tcblower
+	\lipsum[3]
+\end{exercise}
+
+\begin{exercise}[from=TD MPI 2015,nosol]
+	\lipsum[6]
+\end{exercise}
+\begin{exercise}
+	\lipsum[2-5]
+	\tcblower
+	\lipsum[3]
+\end{exercise}
+\begin{exercise}[from=Devoir SR MPI 2019]
+	\lipsum[2-5]
+	\tcblower
+	\lipsum[3]
+\end{exercise}
+\begin{exercise}[nosol]
+	\lipsum[6]
+\end{exercise}
+\begin{exercise}
+	\lipsum[2-5]
+	\tcblower
+	\lipsum[3]
+\end{exercise}
+
+\begin{exercise}[nosol,from=Devoir SN MPI 2012]
+	\lipsum[6]
+\end{exercise}
+\begin{exercise}
+	\lipsum[2-5]
+	\tcblower
+	\lipsum[3]
+\end{exercise}
+\begin{exercise}[from=Devoir SN SEG 2018]
+	\lipsum[2-5]
+	\tcblower
+	\lipsum[3]
+\end{exercise}
+\begin{exercise}[nosol]
+	\lipsum[6]
+\end{exercise}
