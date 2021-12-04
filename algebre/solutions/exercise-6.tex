@@ -1,1 +1,17 @@
-	\lipsum[3]
+
+\begin{enumerate}
+    \item \begin{enumerate}
+        \item On a $X \in \{X, \overline{X}\}$ pour tout $X \in \mathcal{P}(E)$. Donc $\forall X \in \mathcal{P}(E), X\mathcal{R}Y$. La relation est donc réflexive.
+        \item Soient $X,Y \in \mathcal{P}(E)$ tels que $X\mathcal{R}Y$. Alors $X \in \{Y, \overline{Y}\}$. Donc $Y \in \{Y, \overline{Y}\}$. Ainsi, $Y\mathcal{R}X$ et $\mathcal{R}$ est symétrique.
+        \item Soient $X,Y \text{ et } Z \in \mathcal{P}(E)$ tels que $X\mathcal{R}Y \text{ et } Y\mathcal{R} Z$. Donc $X \in \{Y, \overline{Y}\}$ et $Y \in \{Z, \overline{Z}\}$. Remarquons que $Y \in \{Z, \overline{Z}\}$ si et seulement si $\{Y, \overline{Y}\} =\{Z, \overline{Z}\}$. Par suite $X \in \{Z, \overline{Z}\}$ et par conséquent $X\mathcal{R}Z$. Donc la relation $\mathcal{R}$ est transitive.
+    \end{enumerate}
+    \item $\dot{X}=\{X, \overline{X}\}$
+    \item Observons que $E$ est fini non vide, pour tout $X \in \mathcal{P}(E)$, on a $X \neq \overline{X}$. Donc $Card(\dot{X})=2$. Comme $\mathcal{P}(E)$ est réunion de classes d'équivalence, on a:
+    \begin{equation*}
+        Card(\mathcal{P}(E)/\mathcal{R})=\frac{Card(\mathcal{P}(E))}{2}= 2^{n-1} \text{ avec } Card(E)=n.
+    \end{equation*}
+    \item \begin{equation*}
+        \mathcal{P}(E)/\mathcal{R} = \Big\{\big\{\varnothing, E\big\}; \big\{\{1\}, \{2, 3\}\big\}; \big\{\{3\}, \{1, 2\}\big\};\Big\}
+    \end{equation*}
+\end{enumerate}
+
