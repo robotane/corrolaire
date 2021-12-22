@@ -26,16 +26,16 @@
 \newcommand{\X}{\phantom{X}}
 \newcommand{\circled}[1]{
 	\begin{tikzpicture}[baseline, every node/.style={minimum size=8mm, anchor=base}]
-	\path node at (0,0) [shape=circle, fill=black!10] (0,0) {\X} 
-	node at (1,0) [shape=circle, fill=black!35] (0,0) {\X} 
+	\path node at (0,0) [shape=circle, fill=black!10] (0,0) {\X}
+	node at (1,0) [shape=circle, fill=black!35] (0,0) {\X}
 	node at (2,0) [shape=circle, fill=black!60] (0,0) {#1}
 	node at (3,0) [shape=circle, fill=black!35] (0,0) {\X}
-	node at (4,0) [shape=circle, fill=black!10] (0,0) {\X}; 
+	node at (4,0) [shape=circle, fill=black!10] (0,0) {\X};
 	\end{tikzpicture}
 }\newcommand{\circledinv}[1]{%
 \begin{tikzpicture}[baseline, every node/.style={minimum size=8mm, anchor=base}]
-	\path% 
-	node at (0,0) [shape=circle, fill=black!10,minimum size=13mm] (0,0) {\X} 
+	\path%
+	node at (0,0) [shape=circle, fill=black!10,minimum size=13mm] (0,0) {\X}
 	node at (0,0) [shape=circle, fill=black!20,minimum size=12mm] (0,0) {\X}
 	node at (0,0) [shape=circle, fill=black!40,minimum size=11mm] (0,0) {\X}
 	node at (0,0) [shape=circle, fill=black!60,minimum size=10mm] (0,0) {#1} ;
@@ -52,13 +52,13 @@
 
 %\newcommand*\circled[1]{{\fontspec[Ligature=Discretionary]{Junicode}[[#1]]}}
 
-%\newpagestyle{main}{ 
+%\newpagestyle{main}{
 %	\sethead[][\large\bsc{Partie \parttitle}][] %even
 %		{}{\large\bsc{\chaptertitle}}{} %odd
 %	\setfoot[\bf\textit{\bsc{A bosser}}][\circled{\emph{\thepage}}][A votre service] %even
 %		{\emph{Exos-Corigés}}{\circled{\emph{\thepage}}}{\emph{La voie du succes}} %odd
 %}
-\newpagestyle{main}{ 
+\newpagestyle{main}{
 	\sethead[][\large\bsc{Partie \parttitle}][] %even
 	{}{\large\bsc{\chaptertitle}}{} %odd
 	\setfoot[\parttitle~\bul~\chaptertitle][\circled{\bf{\textcolor{white}{\thepage}}}][Even right] %even
@@ -66,7 +66,7 @@
 }
 \pagestyle{main}
 
-\headrule 
+\headrule
 \setheadrule{0.4pt}
 %\setfootrule{0.4pt}
 
@@ -101,7 +101,7 @@
 	basicstyle=\ttfamily\footnotesize,       % the size of the fonts that are used for the code
 	numbers=left,                   % where to put the line-numbers
 	numberstyle=\tiny\color{gray},  % the style that is used for the line-numbers
-	stepnumber=1,                   % the step between two line-numbers. If it's 1, each line 
+	stepnumber=1,                   % the step between two line-numbers. If it's 1, each line
 	% will be numbered
 	numbersep=5pt,                  % how far the line-numbers are from the code
 	backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
@@ -138,21 +138,21 @@
 	breakable,
 	enhanced,
 	fonttitle=\bfseries,
-	width=\linewidth-6pt, 
+	width=\linewidth-6pt,
 	enlarge top by=3pt,
-	enlarge bottom by=3pt, 
+	enlarge bottom by=3pt,
 	enlarge left by=3pt,
 	enlarge right by=3pt,
 	boxrule=0pt,top=1mm,bottom=1mm,
 	colframe=black!50,
 	colbacktitle=black!5,
 	coltitle=black,
-	colback=white, 
-	borderline={0.5pt}{-0.5pt}{black!30}, 
+	colback=white,
+	borderline={0.5pt}{-0.5pt}{black!30},
 	borderline={1pt}{-3pt}{black!75},
 	%	varwidth boxed title
-	title={Exercice~\ref{#1:exercise@#2} page~\pageref{#1:exercise@#2}}, 
-	phantomlabel={#1:solution@#2}, 
+	title={Exercice~\ref{#1:exercise@#2} page~\pageref{#1:exercise@#2}},
+	phantomlabel={#1:solution@#2},
 	%attach title to upper=\par,
 }{\input{#3}}
 
@@ -164,21 +164,21 @@
 		enhanced jigsaw,opacityback=0.35,
 		breakable,
 		before skip=2mm,
-		after skip=2mm, 
+		after skip=2mm,
 		colback=white,
 		colbacktitle=black!15,
 		colframe=black!50,
 		boxrule=0.2mm,
-		%overlay unbroken and first={\path[left color=tcbcol@back!60!black,right color=tcbcol@back!60!black, middle color=tcbcol@back!80!black] ([xshift=-0.2mm,yshift=-1.02cm]frame.north east) -- ++(-1,1) -- ++(-0.5,0) -- ++(1.5,-1.5) -- cycle;},
-		attach boxed title to top left={xshift=1cm,yshift*=1mm-\tcboxedtitleheight}, 
-		%varwidth boxed title*=-3cm, 
+		%overlay unbroken and first={\path[left color=tcbcolback!60!black,right color=tcbcolback!60!black, middle color=tcbcolback!80!black] ([xshift=-0.2mm,yshift=-1.02cm]frame.north east) -- ++(-1,1) -- ++(-0.5,0) -- ++(1.5,-1.5) -- cycle;},
+		attach boxed title to top left={xshift=1cm,yshift*=1mm-\tcboxedtitleheight},
+		%varwidth boxed title*=-3cm,
 		boxed title style={
-			frame code={ \path[fill=tcbcol@back!90] ([yshift=-1mm,xshift=-1mm]frame.north west) arc[start angle=0,end angle=180,radius=1mm] ([yshift=-1mm,xshift=1mm]frame.north east) arc[start angle=180,end angle=0,radius=1mm]; \path[left color=tcbcol@back!60!black,right color=tcbcol@back!60!black, middle color=tcbcol@back!80!black] ([xshift=-2mm]frame.north west) -- ([xshift=2mm]frame.north east) [rounded corners=1mm]-- ([xshift=1mm,yshift=-1mm]frame.north east) -- (frame.south east) -- (frame.south west) -- ([xshift=-1mm,yshift=-1mm]frame.north west) [sharp corners]-- cycle; },
-			interior engine=empty, }, 
+			frame code={ \path[fill=tcbcolback!90] ([yshift=-1mm,xshift=-1mm]frame.north west) arc[start angle=0,end angle=180,radius=1mm] ([yshift=-1mm,xshift=1mm]frame.north east) arc[start angle=180,end angle=0,radius=1mm]; \path[left color=tcbcolback!60!black,right color=tcbcolback!60!black, middle color=tcbcolback!80!black] ([xshift=-2mm]frame.north west) -- ([xshift=2mm]frame.north east) [rounded corners=1mm]-- ([xshift=1mm,yshift=-1mm]frame.north east) -- (frame.south east) -- (frame.south west) -- ([xshift=-1mm,yshift=-1mm]frame.north west) [sharp corners]-- cycle; },
+			interior engine=empty, },
 		fonttitle=\bfseries,
-		title={Exercice~\arabic{\tcbcounter}}, 
+		title={Exercice~\arabic{\tcbcounter}},
 		label={#1:exercise@\thetcbcounter},
-		%	attach title to upper=\quad, 
+		%	attach title to upper=\quad,
 		after upper={\par\hfill\textcolor{black!90}%
 			{\itshape Solution page~\pageref{#1:solution@\thetcbcounter}}
 		},
@@ -186,7 +186,7 @@
 		savelowerto=#1/solutions/exercise-\thetcbcounter.tex, record={\string\solution{#1}{\thetcbcounter}{#1/solutions/exercise-\thetcbcounter.tex}},
 		##1
 	}
-	
+
 	\tcbset{nosol/.style={no recording,after upper=,overlay unbroken and first=}}
 	\tcbset{from/.style={before upper={\par\textcolor{black!90}  {\textbf{\itshape Source: ##1}}\par}}}
 	\tcbrecord{\string\chapter{\chaptertitle}}
@@ -206,14 +206,14 @@
 	\tableofcontents
 	\part{Enoncés}
 	\parttoc
-	
+
 	\chapter{Algebre}
-	\begin{Exolist}{algebre}	
+	\begin{Exolist}{algebre}
 		\input{algebre.tex}
 	\end{Exolist}
 
 	\chapter{Analyse}
-	\begin{Exolist}{analyse}	
+	\begin{Exolist}{analyse}
 		\input{analyse.tex}
 	\end{Exolist}
 
@@ -223,11 +223,11 @@
 	\end{Exolist}
 
 	\chapter{Physique}
-	\begin{Exolist}{physique}	
+	\begin{Exolist}{physique}
 		\input{physique.tex}
 	\end{Exolist}
 
-	\tcbstoprecording	
+	\tcbstoprecording
 	\part{Corrigés}
 	\parttoc
 	\input{corrections.tex}
