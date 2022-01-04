@@ -134,7 +134,7 @@
 %\immediate\newwrite\exocor
 %\immediate\openout\exocor=corrections.tex
 
-\NewTotalTColorBox{\solution}{mmm}{%
+\NewTotalTColorBox{\solution}{mm}{%
 	breakable,
 	enhanced,
 	fonttitle=\bfseries,
@@ -154,7 +154,7 @@
 	title={Exercice~\ref{#1:exercise@#2} page~\pageref{#1:exercise@#2}},
 	phantomlabel={#1:solution@#2},
 	%attach title to upper=\par,
-}{\input{#3}}
+}{\input{#1/solutions/exercise-#2.tex}}
 
 \newenvironment{Exolist}[1]
 {
@@ -182,14 +182,15 @@
 		after upper={\par\hfill\textcolor{black!90}%
 			{\itshape Solution page~\pageref{#1:solution@\thetcbcounter}}
 		},
-		lowerbox=ignored,
-		savelowerto=#1/solutions/exercise-\thetcbcounter.tex, record={\string\solution{#1}{\thetcbcounter}{#1/solutions/exercise-\thetcbcounter.tex}},
+		lowerbox=ignored, %Ignore the lower box, the solution will be printed on another page
+		savelowerto=#1/solutions/exercise-\thetcbcounter.tex, %Save the solution to a file
+        record={\string\solution{#1}{\thetcbcounter}}, %Record the solution of the current exercise commad into the 'corrections.tex' file
 		##1
 	}
 
 	\tcbset{nosol/.style={no recording,after upper=,overlay unbroken and first=}}
 	\tcbset{from/.style={before upper={\par\textcolor{black!90}  {\textbf{\itshape Source: ##1}}\par}}}
-	\tcbrecord{\string\chapter{\chaptertitle}}
+	\tcbrecord{\string\chapter{\chaptertitle}} %Record the title of the chapter to the 'corrections.tex' file
 	}
 {
 }
