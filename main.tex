@@ -154,7 +154,7 @@
 	title={Exercice~\ref{#1:exercise@#2} page~\pageref{#1:exercise@#2}},
 	phantomlabel={#1:solution@#2},
 	%attach title to upper=\par,
-}{\input{#1/solutions/exercise-#2.tex}}
+}{\input{solutions/#1/exercise-#2.tex}}
 
 \newenvironment{Exolist}[1]
 {
@@ -183,7 +183,7 @@
 			{\itshape Solution page~\pageref{#1:solution@\thetcbcounter}}
 		},
 		lowerbox=ignored, %Ignore the lower box, the solution will be printed on another page
-		savelowerto=#1/solutions/exercise-\thetcbcounter.tex, %Save the solution to a file
+		savelowerto=solutions/#1/exercise-\thetcbcounter.tex, %Save the solution to a file
         record={\string\solution{#1}{\thetcbcounter}}, %Record the solution of the current exercise commad into the 'corrections.tex' file
 		##1
 	}
